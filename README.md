@@ -1,4 +1,4 @@
-# Optima Template (React + Vite)
+# Optimal project template (React JS + Vite)
 
 Ce projet est un prototype d'application React moderne avec une architecture clean et plusieurs outils intégrés pour améliorer la qualité du code et les performances. Il inclut la navigation, les appels API, le styling, le linting et l'analyse de code via SonarQube.
 
@@ -8,17 +8,21 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés :
 
 - [Node.js](https://nodejs.org/) (v22.5.1 ou plus)
 - [npm](https://www.npmjs.com/) (généralement inclus avec Node.js)
-
+- [nvm](https://github.com/coreybutler/nvm-windows/releases) (pour controler les versions npm)
+  
 ## Installation
 
 1. Clonez le dépôt :
-
+   
 ```bash
 git clone https://github.com/mohamedbouanane/OptimalReact.git
+```
+
+```bash
 cd OptimalReact
 ```
 
-2. Installez les dépendances du projet :
+1. Installez les dépendances du projet :
 
 ```bash
 npm install
@@ -28,23 +32,39 @@ npm install
 
 Voici une vue d'ensemble de l'architecture du projet :
 
-> my-react-app/
-> │
-> ├── public/                  # Fichiers statiques
-> ├── src/
-> │   ├── assets/             # Fichiers statiques spécifiques (images, styles)
-> │   ├── components/   # Composants réutilisables
-> │   ├── pages/             # Pages de l'application
-> │   ├── services/         # Gestion des appels API
-> │   ├── hooks/             # Hooks personnalisés
-> │   ├── utils/                # Fonctions utilitaires
-> │   ├── styles/             # Fichiers CSS globaux
-> │   ├── App.js             # Composant principal de l'application
-> │   └── main.js            # Point d'entrée du projet
-> ├── .gitignore              # Fichiers à ignorer par Git
-> ├── package.json        # Dépendances et scripts npm
-> ├── sonar-project.properties    # Configuration SonarQube/Cloud
-> └── vite.config.js        # Configuration Vite
+```
+my-react-app/
+│
+├── public/           # Fichiers statiques
+│   ├── index.html    # Fichier HTML principal
+│   ├── favicon.ico   # Icône de l'application
+│   └── assets/       # Dossier pour les ressources statiques
+│
+├── src/
+│   ├── assets/       # Fichiers statiques spécifiques, (Images, polices, styles, etc.)
+│   ├── components/   # Composants réutilisables
+│   │   └── common/
+│   ├── pages/        # Pages de l'application
+│   │   └── common/      
+│   ├── services/     # Gestion des appels API
+│   │   └── common/
+│   ├── hooks/        # Hooks personnalisés
+│   │   └── common/
+│   ├── context/      # Contexte React pour le state global
+│   │   └── common/
+│   ├── utils/        # Fonctions utilitaires
+│   │   └── common/
+│   ├── styles/       # Fichiers CSS ou SASS globaux
+│   ├── i18n.js       # Configuration de l'internationalisation
+│   ├── App.js        # Composant principal de l'application
+│   └── main.jsx      # Point d'entrée du projet
+│
+├── .env              # Variables d'environnement
+├── .gitignore        # Fichiers à ignorer par Git
+├── package.json      # Dépendances et scripts npm
+├── sonar-project.properties   # Configuration SonarQube/Cloud
+└── vite.config.js    # Configuration Vite
+```
 
 ## Scripts NPM
 
@@ -122,6 +142,10 @@ Les résultats de l'analyse seront disponibles sur votre serveur **SonarQube** o
 
 Les contributions sont les bienvenues ! Ouvrez une **issue** ou un **pull request** pour toute suggestion ou amélioration.
 
+## TODO liste
+
+Afin de pouvoir suivre l'avancement des objectifs du projet, veuillez voir le fichier [TODO](/TODO.md).
+
 ## License
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE]() pour plus de détails.
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](/LICENSE) pour plus de détails.

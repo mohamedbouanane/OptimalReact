@@ -11,25 +11,63 @@
 * [X] Créer une architecture de dossiers propre.
 * [X] Créer un fichier `README.md` pour documenter le projet.
 
-### 3. **Configuration de la navigation**
+### 3. **Linting et formatage**
 
-* [X] Installer **React Router DOM** (`npm install react-router-dom`).
-* [ ] Configurer un système de routage basique avec plusieurs pages.
-* [ ] Ajouter une page d'erreur 404.
+* [X] Installer **ESLint** pour le linting (`npm install eslint --save-dev`).
+* [ ] Configurer ESLint avec des règles spécifiques à React.
+* [X] Installer **Prettier** pour formater automatiquement le code (`npm install prettier --save-dev`).
+* [ ] Ajouter des scripts NPM pour lancer ESLint et Prettier.
 
-### 4. **Gestion des appels API**
+### 4. **SonarQube et analyse de code**
+
+* [X] Installer **SonarScanner** (`npm install sonar-scanner --save-dev`).
+* [ ] Configurer **SonarQube** ou **SonarCloud** pour analyser la qualité du code.
+* [ ] Ajouter un fichier `sonar-project.properties` avec la configuration Sonar.
+
+### 5. **Environnements de développement**
+
+* [ ] Configuration des fichiers d'environements, Local, Dev, Rec, PProd, Prod. 
+
+### 6. **Internationalisation (i18n)**
+
+* [X] **Choisir une bibliothèque d'internationalisation** ( `npm install react-i18next i18next i18next-http-backend i18next-browser-languagedetector  --save
+`).
+* [ ] **Configurer la gestion des langues** pour permettre la traduction de l'interface utilisateur.
+* [ ] **Ajouter des fichiers de langue** pour chaque langue prise en charge.
+
+### 7. **Gestion des erreurs**
+
+* [ ] **Implémenter un système de gestion des erreurs global** pour capturer et gérer les erreurs inattendues.
+* [ ] **Ajouter des messages d'erreur utilisateur** pour les problèmes rencontrés (ex. 404, 500).
+* [ ] **Documenter les erreurs courantes et leurs solutions** pour aider au débogage.
+
+### 8. **Gestion des logs**
+
+* [ ] **Choisir une bibliothèque de logging** (ex. `winston`, `log4js`, ou utiliser des solutions basées sur le cloud comme Sentry ou Loggly).
+* [ ] **Configurer un service de logging** pour envoyer les logs au serveur ou à un service de monitoring.
+* [ ] **Implémenter un middleware** pour capturer les erreurs dans l'application et les loguer.
+* [ ] **Gérer le niveau de logging** (info, avertissement, erreur) pour filtrer les logs en fonction de leur criticité.
+* [ ] **Documenter les meilleures pratiques** pour le logging, y compris le format des messages de log et la gestion des logs sensibles.
+
+### 9. **Gestion des appels API**
 
 * [X] Installer **Axios** pour gérer les requêtes HTTP (`npm install axios`).
 * [ ] Créer un service API dans `/src/services` pour centraliser les appels API.
 * [ ] Ajouter des méthodes pour les opérations courantes (GET, POST, PUT, DELETE).
 
-### 5. **Gestion de l'état**
+### 10. **Configuration de la navigation**
+
+* [X] Installer **React Router DOM** (`npm install react-router-dom`).
+* [ ] Configurer un système de routage basique avec plusieurs pages.
+* [ ] Ajouter une page d'erreur 404.
+
+### 11. **Gestion de l'état**
 
 * [ ] Utiliser le **useState** et **useEffect** pour la gestion d'état locale.
 * [ ] Installer et configurer **Redux Toolkit** ou **React Context** pour la gestion d'état globale si nécessaire.
 * [ ] Intégrer une gestion de thèmes (mode clair/sombre).
 
-### 6. **Composants UI**
+### 12. **Composants UI**
 
 Créer des composants réutilisables (boutons, cartes, modales, etc.).
 
@@ -103,64 +141,7 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 * [ ] Ajouter un système de notification/toasts pour les retours d'interaction utilisateur.
 * [X] Utiliser **Styled Components** ou **CSS Modules** pour gérer les styles en CSS-in-JS (`npm install styled-components`).
 
-### 7. **Tests**
-
-* [X] Installer **Jest** et **React Testing Library** (`npm install --save-dev jest @testing-library/react`).
-* [ ] Écrire des tests unitaires pour les composants.
-* [ ] Configurer un système de couverture de tests (`npm run test -- --coverage`).
-
-### 8. **Linting et formatage**
-
-* [X] Installer **ESLint** pour le linting (`npm install eslint --save-dev`).
-* [ ] Configurer ESLint avec des règles spécifiques à React.
-* [X] Installer **Prettier** pour formater automatiquement le code (`npm install prettier --save-dev`).
-* [ ] Ajouter des scripts NPM pour lancer ESLint et Prettier.
-
-### 9. **Performances**
-
-* [ ] Optimiser le chargement initial en chargeant les composants à la demande (code splitting).
-* [ ] Utiliser **React.memo** pour éviter des re-renders inutiles.
-* [ ] Mettre en place une gestion du cache pour les appels API fréquents (ex. SWR ou React Query).
-
-### 10. **SonarQube et analyse de code**
-
-* [X] Installer **SonarScanner** (`npm install sonar-scanner --save-dev`).
-* [ ] Configurer **SonarQube** ou **SonarCloud** pour analyser la qualité du code.
-* [ ] Ajouter un fichier `sonar-project.properties` avec la configuration Sonar.
-
-### 11. **Optimisation de la build**
-
-* [ ] Configurer un fichier de configuration pour **Vite** ou **Webpack** pour une optimisation des performances en production.
-* [ ] Configurer des variables d'environnement (`.env`) pour gérer les clés API et autres configurations.
-* [ ] Minifier et compresser les images et autres assets.
-
-### 12. **Déploiement**
-
-* [ ] Configurer un pipeline de CI/CD pour automatiser les tests et les déploiements (GitHub Actions, GitLab CI, etc.).
-* [ ] Déployer sur une plateforme comme  **Vercel** , **Netlify** ou  **Heroku** .
-* [ ] Configurer un domaine personnalisé et ajouter un certificat SSL si nécessaire.
-
-### 13. **Améliorations UX/UI**
-
-* [ ] Implémenter une gestion des erreurs utilisateurs avec des messages clairs (ex. formulaire avec validation).
-* [ ] Ajouter des animations et transitions subtiles pour une meilleure expérience utilisateur.
-* [ ] Rendre l'application responsive pour les appareils mobiles.
-
-### 14. **Documentation**
-
-* [ ] Compléter le fichier `README.md` avec des instructions d'installation, d'utilisation et des scripts disponibles.
-* [ ] Documenter les services API avec des commentaires JSDoc ou Swagger si applicable.
-* [X] Ajouter un fichier `LICENSE` pour définir les conditions d'utilisation.
-
-### 15. **Gestion des logs**
-
-* [ ] **Choisir une bibliothèque de logging** (ex. `winston`, `log4js`, ou utiliser des solutions basées sur le cloud comme Sentry ou Loggly).
-* [ ] **Configurer un service de logging** pour envoyer les logs au serveur ou à un service de monitoring.
-* [ ] **Implémenter un middleware** pour capturer les erreurs dans l'application et les loguer.
-* [ ] **Gérer le niveau de logging** (info, avertissement, erreur) pour filtrer les logs en fonction de leur criticité.
-* [ ] **Documenter les meilleures pratiques** pour le logging, y compris le format des messages de log et la gestion des logs sensibles.
-
-### 16. **Gestion de l'authentification**
+### 13. **Gestion de l'authentification**
 
 * [ ] **Choisir un type d'authentification** (JWT, OAuth2, etc.).
 * [ ] **Installer une bibliothèque d'authentification** (ex. `auth0`, `firebase`, ou utiliser des solutions personnalisées).
@@ -171,38 +152,69 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 * [ ] **Gérer la réinitialisation du mot de passe** (envoyer un e-mail de réinitialisation, validation du mot de passe).
 * [ ] **Implémenter un système de gestion des rôles** (Admin, User, Guest) si nécessaire.
 
-### 17. **Gestion des notifications**
+### 14. **Gestion des notifications**
 
 * [ ] **Installer une bibliothèque de notifications** (ex. `react-toastify`, `notistack`).
 * [ ] **Configurer des notifications** pour informer les utilisateurs des succès, des erreurs, ou d'autres événements importants.
 * [ ] **Ajouter un système de gestion des alertes** pour les messages d'erreur ou de confirmation.
 
-### 18. **Formulaires et validation**
+### 15. **Formulaires et validation**
 
 * [ ] **Choisir une bibliothèque de gestion des formulaires** (ex. `formik`, `react-hook-form`).
 * [ ] **Implémenter la validation des formulaires** avec une bibliothèque comme `Yup` ou des validations personnalisées.
 * [ ] **Gérer les états de chargement et d'erreur** lors des soumissions de formulaires.
+### 16. **Tests**
 
-### 19. **Internationalisation (i18n)**
+* [X] Installer **Jest** et **React Testing Library** (`npm install --save-dev jest @testing-library/react`).
+* [ ] Écrire des tests unitaires pour les composants.
+* [ ] Configurer un système de couverture de tests (`npm run test -- --coverage`).
 
-* [ ] **Choisir une bibliothèque d'internationalisation** (ex. `react-i18next`, `react-intl`).
-* [ ] **Configurer la gestion des langues** pour permettre la traduction de l'interface utilisateur.
-* [ ] **Ajouter des fichiers de langue** pour chaque langue prise en charge.
-
-### 20. **Accessibilité (a11y)**
+### 17. **Accessibilité (a11y)**
 
 * [ ] **Utiliser des outils d'audit d'accessibilité** (ex. `axe`, `react-axe`) pour analyser le code.
 * [ ] **Suivre les bonnes pratiques d'accessibilité** lors du développement des composants.
 * [ ] **Tester l'application avec des lecteurs d'écran** pour s'assurer qu'elle est navigable par tous les utilisateurs.
 
-### 21. **Suivi des performances**
+### 18. **Performances**
+
+* [ ] Optimiser le chargement initial en chargeant les composants à la demande (code splitting).
+* [ ] Utiliser **React.memo** pour éviter des re-renders inutiles.
+* [ ] Mettre en place une gestion du cache pour les appels API fréquents (ex. SWR ou React Query).
+
+### 19. **Optimisation de la build**
+
+* [ ] Configurer un fichier de configuration pour **Vite** ou **Webpack** pour une optimisation des performances en production.
+* [ ] Configurer des variables d'environnement (`.env`) pour gérer les clés API et autres configurations.
+* [ ] Minifier et compresser les images et autres assets.
+
+### 20. **Déploiement**
+
+* [ ] Configurer un pipeline de CI/CD pour automatiser les tests et les déploiements (GitHub Actions, GitLab CI, etc.).
+* [ ] Déployer sur une plateforme comme  **Vercel** , **Netlify** ou  **Heroku** .
+* [ ] Configurer un domaine personnalisé et ajouter un certificat SSL si nécessaire.
+
+### 21. **Améliorations UX/UI**
+
+* [ ] Implémenter une gestion des erreurs utilisateurs avec des messages clairs (ex. formulaire avec validation).
+* [ ] Ajouter des animations et transitions subtiles pour une meilleure expérience utilisateur.
+* [ ] Rendre l'application responsive pour les appareils mobiles.
+
+### 22. **Suivi des performances**
 
 * [ ] **Intégrer des outils de suivi des performances** (ex. Google Analytics, New Relic, ou Sentry).
 * [ ] **Mesurer les temps de chargement** et les performances des composants.
 * [ ] **Optimiser les ressources** (images, fichiers CSS/JS) pour améliorer les performances de l'application.
 
-### 22. **Gestion des erreurs**
+### 23. **Documentation**
 
-* [ ] **Implémenter un système de gestion des erreurs global** pour capturer et gérer les erreurs inattendues.
-* [ ] **Ajouter des messages d'erreur utilisateur** pour les problèmes rencontrés (ex. 404, 500).
-* [ ] **Documenter les erreurs courantes et leurs solutions** pour aider au débogage.
+* [ ] Compléter le fichier `README.md` avec des instructions d'installation, d'utilisation et des scripts disponibles.
+* [ ] Documenter les services API avec des commentaires JSDoc ou Swagger si applicable.
+* [X] Ajouter un fichier `LICENSE` pour définir les conditions d'utilisation.
+
+# Priorité 
+- config Environnements
+- implementation internatianalisation
+- implementation logging
+- gestion des erreur & midelwar d'erreurs
+- dev des helpers api
+- integration des test
