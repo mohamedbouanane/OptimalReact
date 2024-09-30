@@ -7,19 +7,131 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency directories
+node_modules/
+jspm_packages/
 
-# Editor directories and files
-.vscode/*
-.vs/*
+# Build output
+build/
+dist/
+dist-ssr/
+out/
+release/
+build/Release/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm/yarn/pnpm cache directory
+.npm
+.npm/
+.yarn/
+.pnp/
+.pnp.js
+.cache/
+
+# Output of 'npm pack'
+*.tgz
+
+# TypeScript declaration files
+typings/
+*.d.ts
+
+# nyc test coverage
+.nyc_output/
+coverage/
+coverage-final.json
+
+# OS-generated files
+Thumbs.db
+Desktop.ini
+
+# IDE-specific directories and configurations
+.idea/
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.vs/
+.code-workspace
+
+# Dependency directories for mono-repos
+lerna-debug.log*
+lerna.json
+packages/*/node_modules/
+yarn.lock
+pnpm-lock.yaml
+
+# Docker files and containers
+.dockerignore
+Dockerfile
+docker-compose.yml
+.docker/
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+
+# Coverage
+coverage/
+*.lcov
+
+# Static site builds
+public/
+out/
+
+# Temporary files
+*.temp
+*.tmp
+*.bak
+*.swp
+
+# Compiled source
+*.out
+*.js.map
+*.css.map
+*.min.js
+*.min.css
+
+# Templated generated files
+*.bak
+
+# Test output
+coverage/
+junit.xml
+test-results.xml
+.cypress/videos/
+.cypress/screenshots/
+mochawesome-report/
+
+# Miscellaneous
+*.log
+*.cache
+*.eslintcache
+*.prettierrc
+*.prettierrc.json
+*.stylelintcache
+*.sass-cache/
+*.tern-port
+*.pem
+*.p12
+*.cer
+*.crt
+*.key
+
+# OS-specific
+*.DS_Store
+._*
+Thumbs.db
+
+# SASS cache
+.sass-cache/
+
+# Yarn Integrity
+.yarn-integrity
+.pnp.*
+

@@ -1,0 +1,139 @@
+# Les fichiers que Prettier doit ignorer
+
+# Ignorer les dossiers de build, distribution, et node_modules
+node_modules
+build
+dist
+out
+public
+
+# Ignorer les fichiers de lock (npm, yarn, pnpm, etc.)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignorer les fichiers de logs
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorer les fichiers environnementaux
+.env.*
+
+# Ignorer les fichiers de configuration de bundlers, linters et autres outils
+*.config.js
+*.config.cjs
+*.config.mjs
+*.config.ts
+*.config.json
+webpack.config.js
+rollup.config.js
+babel.config.js
+tsconfig.json
+.eslintrc.js
+.eslintrc.json
+.prettierrc
+.prettierrc.json
+
+# Ignorer les fichiers spécifiques aux environnements IDE et OS
+.vscode/
+.vs/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers de test coverage
+coverage
+.nyc_output
+.jest/
+cypress/videos/
+cypress/screenshots/
+sonar-project.properties
+*.lcov
+
+# Ignorer les fichiers générés par l'outil de documentation ou de tests
+*.md
+*.txt
+*.pdf
+doc/
+docs/
+.storybook/
+storybook-static/
+LICENSE
+
+# Ignorer les fichiers minifiés
+*.min.js
+*.min.css
+
+# Ignorer les fichiers de cache et temporaires
+.cache
+.temp
+.tmp
+.cache-loader
+.sass-cache
+*.bak
+*.swp
+
+# Ignorer les fichiers de gestion de versions
+.git
+.gitignore
+.gitattributes
+
+# Ignorer les fichiers de configurations CI/CD
+.circleci/
+.github/
+.gitlab-ci.yml
+Dockerfile
+docker-compose.yml
+
+# Ignorer les fichiers de conteneurs ou de virtualisation
+.vagrant/
+.dockerignore
+
+# Ignorer les fichiers spécifiques aux environnements de monorepo
+lerna.json
+packages/*/dist/
+packages/*/node_modules/
+
+# Ignorer les fichiers de base des workflows ou pipelines
+.pipeline/
+Jenkinsfile
+
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+
+# SASS cache
+.sass-cache/
+
+# Yarn Integrity
+.yarn-integrity
+.pnp.*
+
+# Ignorer les fichiers images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.tiff
+*.bmp
+
+# Ignorer les fichiers vidéos
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.m4v
+*.3gp
+*.mpeg
+

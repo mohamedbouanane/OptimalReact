@@ -13,25 +13,29 @@
 
 ### 3. **Linting et formatage**
 
-* [X] Installer **ESLint** pour le linting (`npm install eslint --save-dev`).
-* [ ] Configurer ESLint avec des règles spécifiques à React.
-* [X] Installer **Prettier** pour formater automatiquement le code (`npm install prettier --save-dev`).
-* [ ] Ajouter des scripts NPM pour lancer ESLint et Prettier.
+* [X] Installer **ESLint** pour le linting (`npm install eslint eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y --save-dev`).
+* [X] Initialiser la configuration ESLint (`npx eslint --init`).
+* [X] Configurer ESLint avec des règles spécifiques à React dans le fichier `eslint.config.js`.
+
+* > Installer **Prettier** pour formater automatiquement le code `npm install prettier --save-dev prettier`
+  > Pour éviter les conflits avec ESLint installer les packages (`npm install --save-dev eslint-config-prettier eslint-plugin-prettier`). et ajouter le fichier de configurer ` .eslintrc.json` comportant la config `{"extends": ["plugin:prettier/recommended"]}`
+  >
+
+* [X] Configurer les fichiers que Prettier doit ignorer, dans le fichier `.prettierignore` et configurer les règles de formatage dans `.prettierrc.yaml` (situé à la racine du projet) et/ou en ajoutant l'une des configurations les plus poplulaire tel que celle de [airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
+* [X] Ajouter des scripts NPM pour lancer ESLint et Prettier.
 
 ### 4. **SonarQube et analyse de code**
 
 * [X] Installer **SonarScanner** (`npm install sonar-scanner --save-dev`).
-* [ ] Configurer **SonarQube** ou **SonarCloud** pour analyser la qualité du code.
-* [ ] Ajouter un fichier `sonar-project.properties` avec la configuration Sonar.
+* [X] Configurer **SonarQube** pour analyser la qualité du code via le fichier `sonar-project.properties` (situé à la racine du projet).
 
-### 5. **Environnements de développement**
+### 5. **Configurations des environnements**
 
-* [ ] Configuration des fichiers d'environements, Local, Dev, Rec, PProd, Prod. 
+* [X] Configurer les fichiers d'environements: Local, Dev, Rec, PProd et Prod.
 
 ### 6. **Internationalisation (i18n)**
 
-* [X] **Choisir une bibliothèque d'internationalisation** ( `npm install react-i18next i18next i18next-http-backend i18next-browser-languagedetector  --save
-`).
+* [X] **Choisir une bibliothèque d'internationalisation** ( `npm install react-i18next i18next i18next-http-backend i18next-browser-languagedetector  --save `).
 * [ ] **Configurer la gestion des langues** pour permettre la traduction de l'interface utilisateur.
 * [ ] **Ajouter des fichiers de langue** pour chaque langue prise en charge.
 
@@ -75,10 +79,8 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 
 * [ ] `Button` : Un bouton stylisé avec des variantes (primaire, secondaire, désactivé).
 * [ ] `Input` : Champ de saisie pour différents types (texte, mot de passe, email).
-
 * [ ] `Checkbox` : Case à cocher avec des options de sélection.
 * [ ] `Radio` : Boutons radio pour des choix exclusifs.
-
 * [ ] `Select` : Menu déroulant pour sélectionner une option parmi plusieurs.
 * [ ] `Textarea` : Champ de texte multiligne pour de plus longues saisies.
 
@@ -86,9 +88,7 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 
 * [ ] `Card` : Conteneur avec un titre, une image et un contenu pour afficher des informations succinctes.
 * [ ] `Modal` : Fenêtre pop-up pour des messages ou des formulaires contextuels.
-
 * [ ] `Tooltip` : Infobulle qui s'affiche au survol d'un élément.
-
 * [ ] `Alert` : Message d'alerte pour informer l'utilisateur (succès, erreur, avertissement).
 * [ ] `Spinner` : Indicateur de chargement pour signaler une action en cours.
 
@@ -96,30 +96,25 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 
 * [ ] `Container` : Un conteneur flexible pour structurer le contenu.
 * [ ] `Grid` : Système de grille pour aligner les éléments.
-
 * [ ] `FlexBox` : Composant basé sur Flexbox pour un alignement flexible des enfants.
-
 * [ ] `Navbar` : Barre de navigation pour le routage entre les pages.
 * [ ] `Footer` : Pied de page pour des informations supplémentaires (liens, copyright).
 
 4. Composants de navigation
 
 * [ ] `Breadcrumb` : Fil d'Ariane pour naviguer facilement dans la hiérarchie des pages.
-
 * [ ] `Pagination` : Composant pour naviguer entre les pages de résultats.
 * [ ] `Tab` : Onglets pour basculer entre différentes sections de contenu.
 
 5. Composants d'interaction
 
 * [ ] `Form` : Composant pour regrouper les éléments de formulaire et gérer leur état.
-
 * [ ] `Accordion` : Composant qui permet d'afficher/cacher des sections de contenu.
 * [ ] `Carousel` : Diaporama pour faire défiler des éléments ou images.
 
 6. Composants spécifiques
 
 * [ ] `DatePicker` : Sélecteur de date pour permettre aux utilisateurs de choisir une date.
-
 * [ ] `Rating` : Évaluation avec des étoiles pour recueillir des avis.
 * [ ] `SearchBar` : Champ de recherche pour filtrer le contenu.
 
@@ -137,7 +132,6 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 
 * [ ] `ThemeProvider` : Composant pour gérer les thèmes de l'application (clair, sombre).
 * [ ] `GlobalStyles` : Styles globaux pour uniformiser la mise en page et le style de l'application.
-
 * [ ] Ajouter un système de notification/toasts pour les retours d'interaction utilisateur.
 * [X] Utiliser **Styled Components** ou **CSS Modules** pour gérer les styles en CSS-in-JS (`npm install styled-components`).
 
@@ -163,6 +157,7 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 * [ ] **Choisir une bibliothèque de gestion des formulaires** (ex. `formik`, `react-hook-form`).
 * [ ] **Implémenter la validation des formulaires** avec une bibliothèque comme `Yup` ou des validations personnalisées.
 * [ ] **Gérer les états de chargement et d'erreur** lors des soumissions de formulaires.
+
 ### 16. **Tests**
 
 * [X] Installer **Jest** et **React Testing Library** (`npm install --save-dev jest @testing-library/react`).
@@ -211,7 +206,8 @@ Créer des composants réutilisables (boutons, cartes, modales, etc.).
 * [ ] Documenter les services API avec des commentaires JSDoc ou Swagger si applicable.
 * [X] Ajouter un fichier `LICENSE` pour définir les conditions d'utilisation.
 
-# Priorité 
+# Priorité
+
 - config Environnements
 - implementation internatianalisation
 - implementation logging

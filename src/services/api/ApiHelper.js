@@ -1,12 +1,11 @@
-import { config } from "@fortawesome/fontawesome-svg-core";
-import axios from "axios";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import axios from 'axios';
 
 const AxiosApiHelper = (baseURL, headers, timeout = 10000) => {
-
   const axiosInstance = axios.create({
-    baseURL: baseURL, 
+    baseURL: baseURL,
     timeout: timeout,
-    headers: headers
+    headers: headers,
   });
 
   const get = async (url, params = {}, config = {}) => {

@@ -1,0 +1,10 @@
+# Configuration de Prettier
+
+semi: true # Ajoute un point-virgule
+singleQuote: true # Utilise des guillemets simples
+tabWidth: 2 # Largeur d'indentation
+trailingComma: es5 # Virgule finale pour ES5
+bracketSpacing: true # Espace entre accolades
+jsxBracketSameLine: false # `>` sur une nouvelle ligne
+arrowParens: always # Parenthèses autour des fonctions fléchées
+printWidth: 80 # Largeur de ligne

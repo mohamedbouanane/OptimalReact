@@ -1,29 +1,20 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import Backend from 'i18next-http-backend';
+import YAMLBackend from 'i18next-yaml-backend'; // Assurez-vous que ce package est installé
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
 
 i18n
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
+  .use(YAMLBackend) // Utilise le backend YAML
+  .use(LanguageDetector) // Détecte automatiquement la langue de l'utilisateur
+  .use(initReactI18next) // Passe i18next à react-i18next
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'en-US',
     debug: true,
     interpolation: {
-      escapeValue: false,
+      escapeValue: false, // i18next gère la sécurité par défaut
     },
-    resources: {
-      en: {
-        translation: {
-          welcome: "Welcome to our application",
-        },
-      },
-      fr: {
-        translation: {
-          welcome: "Bienvenue dans notre application",
-        },
-      },
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.yaml', // Chemin pour charger les fichiers de traduction
     },
   });
 
